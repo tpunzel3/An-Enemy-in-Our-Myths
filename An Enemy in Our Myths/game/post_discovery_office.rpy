@@ -44,7 +44,7 @@ label post_discovery_office:
     show assistant neutral at character_right with dissolve
 
     a "Well detective, you {i}are{/i} in the Realm of Myths."
-    a "The criminals here can exhibit... more creative murder techniques."
+    a "The criminals here can express their murderous tendencies in… more creative ways."
 
     show detective neutral
     d "Yeah, I guess you're right."
@@ -61,7 +61,9 @@ label post_discovery_office:
 # This label is used when the player looks at clues first
 label looking_at_clues_first:
     show assistant thinking
-    a "Some of the things we found at the scene include the cat hair, a pegasus shoe, broken glass, the Ambrosia drug, the body, and the scorch marks around the body."
+    if talked_about_dionysus:
+        a "Let’s move on to what we found at the scene."
+    a "Some of the things we found were: the cat hair, a pegasus shoe, broken glass, the Ambrosia drug, the body, and the scorch marks around the body."
     show detective neutral
     d "And the medical grade syringe that Nimbus found."
     show assistant neutral
@@ -280,7 +282,10 @@ label looking_at_clues:
 
         # If at least one clue was talked about, the player can choose to skip talking about the rest and move on
         "That's all I can think of for now, let's move on." if at_least_one:
-            jump talking_about_dionysus
+            if talked_about_dionysus != True:
+                jump talking_about_dionysus
+            else:
+                jump after_talking
 
 # The label used to jump to to talk about the Dionysus questions
 label talking_about_dionysus:
@@ -330,7 +335,7 @@ label talking_about_dionysus_questions:
             a "Detective......"
 
             # If the player hasn't talked about all the Dionysus questions
-            if questions_talked < 4:
+            if questions_talked < 5:
                 # Then the loop back up
                 jump talking_about_dionysus_questions
             # If they have talked about all the Dionysus questions
@@ -360,7 +365,7 @@ label talking_about_dionysus_questions:
             a "Unfortunately, both of those are real possibilites."
             a "Hopefully we can find out the victim's identity soon."
 
-            if questions_talked < 4:
+            if questions_talked < 5:
                 jump talking_about_dionysus_questions
             else:
                 if talked_about_clues != True:
@@ -393,7 +398,7 @@ label talking_about_dionysus_questions:
             show assistant neutral
             a "We should definitely have the Valkyrie keep an eye on him."
 
-            if questions_talked < 4:
+            if questions_talked < 5:
                 jump talking_about_dionysus_questions
             else:
                 if talked_about_clues != True:
@@ -421,7 +426,7 @@ label talking_about_dionysus_questions:
             show assistant neutral
             a "We really need to find out the victim's identity."
 
-            if questions_talked < 4:
+            if questions_talked < 5:
                 jump talking_about_dionysus_questions
             else:
                 if talked_about_clues != True:
@@ -448,7 +453,7 @@ label talking_about_dionysus_questions:
             show assistant neutral
             a "It's our job to make sense of it. We must remain vigilant."
 
-            if questions_talked < 4:
+            if questions_talked < 5:
                 jump talking_about_dionysus_questions
             else:
                 if talked_about_clues != True:
@@ -457,8 +462,11 @@ label talking_about_dionysus_questions:
                     jump after_talking
 
         # If at least one Dionysus question was talked about, the player can choose to skip talking about the rest and move on
-        "That's all I can think of for now, let's move on." if at_least_one_2:
-            jump after_talking
+        "I think that’s enough about Dionysus for now." if at_least_one_2:
+            if talked_about_clues != True:
+                jump looking_at_clues_first
+            else:
+                jump after_talking
 
 # The label used to move on from talking about the clues or Dionysus questions
 label after_talking:

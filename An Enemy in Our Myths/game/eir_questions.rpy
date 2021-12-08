@@ -41,7 +41,7 @@ label eir_questions:
 
             pause
 
-            hide eir_cottage with dissolve
+            hide eir_cottage zorder 10 with dissolve
 
             show detective neutral
             d "Is he okay now? Should we get him some water?"
@@ -58,7 +58,7 @@ label eir_questions:
 
             pause
 
-            hide eir_cottage with dissolve
+            hide eir_cottage zorder 10 with dissolve
 
             show detective neutral
             d "I'm sorry to hear that. Is he feeling better?"

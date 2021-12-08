@@ -1,8 +1,11 @@
+# The variable used to track whether the player skipped straight to the accusation or not
+default skipped_to_accusation = False
+
 # The label that brings the player to the final penthouse scene
 label penthouse_final:
 
     scene penthouse_empty with dissolve
-    play music "audio/penthouse.mp3" fadein 1.0
+    play music "audio/interrogation.mp3" fadein 1.0
 
     show detective neutral at character_move_off_screen_left
     show assistant neutral at character_move_off_screen_left
@@ -82,7 +85,9 @@ label penthouse_final:
 
     menu:
         "Fine! That takes all the fun out of this, but I'll cut to the chase.":
-            jump accusation
+            # Sets the variable to true to know the player skipped to the accusation
+            $ skipped_to_accusation = True
+            jump accusation_screen
         "No! You will sit here and wait until I am done. And now I'm gonna take my time.":
             jump penthouse_final_continued
 

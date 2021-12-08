@@ -140,6 +140,9 @@ image interrogation_chair:
 image interrogation_lamp:
     "images/interrogation_lamp.png"
 
+image interrogation_files:
+    "images/interrogation_files.png"
+
 image interrogation_speaker:
     "images/interrogation_speaker.png"
 

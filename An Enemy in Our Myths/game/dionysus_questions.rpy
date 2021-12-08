@@ -93,7 +93,7 @@ label dionysus_questions:
             show assistant neutral flip at character_left zorder 2
             show detective thinking dark at character_move_back_left zorder 1
 
-            a "Our ID badges were blessed by the gods, so we are allowed entry to all buildings. Same with the Valkyrie force."
+            a "Our ID badges were blessed by the gods, so we are allowed entry to all buildings. Same with the Valkyrie Force."
 
             show detective neutral at character_left zorder 2
             show assistant dark flip at character_move_back_left zorder 1

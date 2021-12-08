@@ -60,11 +60,22 @@ label accusation:
     show assistant dark flip at character_move_back_left
     show detective smile at character_left zorder 3
 
+# The label the player jumps to if they skip right to the accusation
+label accusation_screen:
     d "Based on all the evidence, the culprit is..."
 
     # Here all the characters move off the screen
     show detective smile at character_move_off_screen_left
-    show assistant dark flip zorder 1 at character_5
+
+    # If the player skipped
+    if skipped_to_accusation:
+        # Then the Chief Valkyrie moves to the corner, becuase she was last in that position
+        show valkyrie dark flip zorder 1 at character_5
+    # If the player didn't skip
+    else:
+        # Then Pan moves to the corner, becuase they were last in that position
+        show assistant dark flip zorder 1 at character_5
+
     show pegasus dark zorder 1 at character_1
 
     # Except the suspects, they move into a sort of police lineup to allow the player to click on them via the accusation_buttons screen
@@ -189,7 +200,7 @@ label eir_accused:
     d "Exactly."
     show detective thinking
     d "Arel Farphine had gotten addicted to Ambrosia and wanted more. Only racers got any, but unfortunately for Arel, his pegasus Thunder Cloud had escaped so he couldn’t participate in the races."
-    d "He asked you to give him some since you were his doctor and threatened to go to the Valkyrie force if you didn't give him what he wanted."
+    d "He asked you to give him some since you were his doctor and threatened to go to the Valkyrie Force if you didn't give him what he wanted."
     show detective neutral
     d "If word of your involvement with the racing ring and the creation of Ambrosia got out, you would lose your medical license and your status as goddess of medicine."
     d "He was going to ruin your life, so you decided to ruin his."

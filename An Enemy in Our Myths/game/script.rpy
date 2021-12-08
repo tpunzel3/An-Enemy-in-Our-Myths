@@ -14,7 +14,7 @@ label start:
     # The jump function allows you to move to a specific label
     #
     # jump post_nimbus_questions
-    # jump interrogation_room
+    jump interrogation_room
     # jump post_discovery_office
     # jump dionysus_questions
     # jump penthouse1
@@ -356,7 +356,7 @@ label post_questions:
     d "What does that even-"
 
     scene penthouse_clued
-    show pegasus neutral zorder 3
+    show pegasus neigh zorder 3
     show detective neutral dark at character_left zorder 2
     show assistant dark flip at character_move_back_left zorder 1
     show dionysus dark at character_right zorder 2
@@ -467,6 +467,7 @@ label interrogation_room:
     show detective neutral at character_table_right zorder 5 with dissolve
 
     show valkyrie neutral flip at character_table_left zorder 2 with moveinleft
+    show interrogation_files zorder 3 with dissolve
     v "Detective, here are the lab results you requested, and Bastet has arrived."
 
     d "Okay, thanks. You can let her in."
@@ -557,7 +558,15 @@ label post_bastet_questions:
             show bastet defensive flip
             b "Like I said, I was just the vet."
             show bastet annoyed flip
-            b "I did my job, got my money, and went back to my cats. I wasn't about to start asking questions."
+            b "I did my job, got my money and went back to my cafe to spend time with my precious little kitty cats."
+
+            show bastet_cafe with dissolve
+
+            pause
+
+            hide bastet_cafe with dissolve
+
+            b "I wasn't about to start asking questions."
             d "What about Thunder Cloud? What else can you tell me?"
             show bastet thinking flip
             b "Not much. He was one of the better racers and went by the name Thunder Cloud because when he ran, sparks flew from his hooves and the flap of his wings sounded like roaring thunder."
