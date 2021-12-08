@@ -2,7 +2,7 @@ label post_interrogation_office:
 
     scene office with dissolve
 
-    play music "audio/office.wav" fadein 1.0
+    play music "audio/office.mp3" fadein 1.0
 
     show detective annoyed at character_left
     show assistant neutral at character_right

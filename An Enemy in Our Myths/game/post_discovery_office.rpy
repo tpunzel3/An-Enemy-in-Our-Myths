@@ -35,7 +35,7 @@ label post_discovery_office:
     scene black with fade
     pause 0.5
     scene office with fade
-    play music "audio/office.wav" fadein 1.0
+    play music "audio/office.mp3" fadein 1.0
 
     show detective barf at character_left with dissolve
     d "I just can’t get over how disturbing that scene was. There was never anything that gruesome back on Earth!"

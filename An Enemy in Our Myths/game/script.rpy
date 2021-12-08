@@ -44,7 +44,7 @@ label start:
     with fade
 
     # The play function allows you to play music or sounds and can include transitions
-    play music "audio/office.wav" fadein 1.0
+    play music "audio/office.mp3" fadein 1.0
 
     # The show function allows you to show images/character sprites on the screen
     # It allows the adding of locations, tranisitions, and zorder (layering)
