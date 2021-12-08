@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/bastet_questions.rpy", line 31: expected menuitem
+    show detective thinking
+    ^
+
+Ren'Py Version: Ren'Py 7.4.8.1895
+Tue Dec  7 14:27:29 2021
