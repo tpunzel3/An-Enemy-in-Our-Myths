@@ -14,7 +14,7 @@ label start:
     # The jump function allows you to move to a specific label
     #
     # jump post_nimbus_questions
-    jump interrogation_room
+    # jump interrogation_room
     # jump post_discovery_office
     # jump dionysus_questions
     # jump penthouse1
