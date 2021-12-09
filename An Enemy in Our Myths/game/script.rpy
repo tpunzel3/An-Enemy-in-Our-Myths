@@ -525,7 +525,7 @@ label post_bastet_questions:
             show bastet annoyed flip
             b "Yes. Unfortunately, getting distracted by my darling little kittens and forgetting to turn on my open sign is a frequent occurrence."
 
-            show bastet_cafe with dissolve
+            show bastet_cafe zorder 10 with dissolve
 
             pause
 
@@ -560,7 +560,7 @@ label post_bastet_questions:
             show bastet annoyed flip
             b "I did my job, got my money and went back to my cafe to spend time with my precious little kitty cats."
 
-            show bastet_cafe with dissolve
+            show bastet_cafe zorder 10 with dissolve
 
             pause
 

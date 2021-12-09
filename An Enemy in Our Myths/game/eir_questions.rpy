@@ -37,11 +37,11 @@ label eir_questions:
             d "Did you have another night shift last night?"
             e "Well actually, last night little Leopold here was feeling a little under the weather, so I had to stay home to look after him."
 
-            show eir_cottage with dissolve
+            show eir_cottage zorder 10 with dissolve
 
             pause
 
-            hide eir_cottage zorder 10 with dissolve
+            hide eir_cottage with dissolve
 
             show detective neutral
             d "Is he okay now? Should we get him some water?"
@@ -54,11 +54,11 @@ label eir_questions:
             e "Well, I spent most of the day at my cottage taking care of Leopold."
             e "He hasn't been feeling good, so I stayed home to take care of him."
 
-            show eir_cottage with dissolve
+            show eir_cottage zorder 10 with dissolve
 
             pause
 
-            hide eir_cottage zorder 10 with dissolve
+            hide eir_cottage with dissolve
 
             show detective neutral
             d "I'm sorry to hear that. Is he feeling better?"
