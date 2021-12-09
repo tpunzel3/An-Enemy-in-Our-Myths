@@ -11,3 +11,6 @@ The Sussy Six:
 An Enemy in Our Myths is a 2D murder-mystery visual novel where the user plays as a human detective living in a modern realm alongside mythological characters. Detective Amelia O’Finnigan and her assistant Pan are called to investigate a murder at Dionysus’ penthouse, where the player must look for clues and interrogate gods and goddesses to uncover what is truth and what is myth.
 
 An Enemy in Our Myths utilizes Ren'Py, a free and open-source visual novel engine.
+
+ArtStation: https://www.artstation.com/artwork/klllzl
+Itch.io: https://tpunzel3.itch.io/an-enemy-in-our-myths
